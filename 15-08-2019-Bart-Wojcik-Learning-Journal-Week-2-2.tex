@@ -14,9 +14,7 @@
 \subsection{How many people have used spreadsheets in their research?}
 There is no need for spreadsheet use in my research as it is purely qualitative and does in involve the kind of input or output data that is either quantifiable or structure-able. I have used spreadsheets professionally however.
 \subsection{How many people have accidentally done something that made them frustrated or sad?}
-This is not a problem for me.\newline
-\newline
-\textbf{NOTES:} I had to chuckle at this statement: "In this lesson, we will assume that you are most likely using Excel as your primary spreadsheet program - there are other programs with similar functionality but Excel seems to be the most commonly used.". They are probably correct but it is a tall assumption to make.
+This is not a problem for me. I had to shake my head at the statement: "In this lesson, we will assume that you are most likely using Excel as your primary spreadsheet program - there are other programs with similar functionality but Excel seems to be the most commonly used.". They are probably correct but it is a tall assumption to make.
 
 \section{Data Carpentry - Formatting data tables in Spreadsheets:}
 (https://datacarpentry.org/spreadsheets-socialsci/01-format-data/index.html)
@@ -42,12 +40,12 @@ This is not a problem for me.\newline
     \subsection{Problems with the Tanzania sheet:}
     \subsubsection{Dwelling table:}
     \begin{enumerate}
-        \item Same is as in the same table in the Mozambique sheet except the additional data is indicated by an asterisk rather than a highlight. Although the asterisk can be exported to a plain text format like CSV, it will be meaningless as all other values are simple integers, it will become garbage data. The solution is the same as in the Mozambique sheet.
+        \item Same as in the same table in the Mozambique sheet except the additional data is indicated by an asterisk rather than a highlight. Although the asterisk can be exported to a plain text format like CSV, it will be meaningless as all other values are simple integers, it will become garbage data. The solution is the same as in the Mozambique sheet.
     \end{enumerate}
     \subsubsection{Livestock table:}
     \begin{enumerate}
         \item Multiple cells contain null values, it is not clear whether this means that the reported value was zero or whether no data had been collected.
-        \item Data is represented inconsistently with 'poultry', 'goats' and 'cows' columns corrupted with text strings between integers. For example, in 'key\_id' 5 this makes it necessary to assume that 'Yes' for 'Poultry' and 'Cows' equals 1 each, this is fine enough in this case however if the total number of livestock was, for argument's sake, five, the only knowable data would be the total number of livestock and the number of oxen.
+        \item Data is represented inconsistently with 'poultry', 'goats' and 'cows' columns corrupted with text strings between integers. For example, in 'key\_id' 5 this makes it necessary to assume that 'Yes' for 'Poultry' and 'Cows' equals 1 each, this is fine enough in this case, but if the total number of livestock was, for argument's sake, five, the only knowable data would be the total number of livestock and the number of oxen.
     \end{enumerate}
     \textbf{NOTES:} In general, where binary value data is involved a Boolean value is more appropriate, where quantifiable data is involved, it should be represented by a numerical value. Where text string data is concerned, the usage should be consistent so that expect cases can be defined in machine language. Special cases should all have their own columns, even if there is only one special case per table, where the special case does not apply it may be denoted by a Boolean value 'false', for example 'cowsheds - true/false' for each 'key\_id'. To merge both sheets, the recording convention needs to be made consistent. For example as it is, it would impossible to merge the 'livestock' tables because each contains data recorded in a different manner.
 \end{enumerate}
@@ -67,7 +65,7 @@ This is not a problem for me.\newline
 (https://datacarpentry.org/spreadsheets-socialsci/02-common-mistakes/index.html)
 \begin{enumerate}
     \item Using multiple tables per sheet is a problem (to be fair, this depends on how the data is ultimately to be used, this has never proven to be a problem when I worked with retail and wholesale pricelists in my professional career, however in the context of this data it would create a garbage export to plain text).
-    \item The point about using multiple tabs is fair, however I do not known the background of the data collection part of this project. It is conceivable (and how I imagined it) that the data was collected by multiple individuals and at the time the messy spreadsheet had been created, it had not been collated yet.
+    \item The point about using multiple tabs is fair, however I do not known the background of the data collection conducted as a part of this project. It is conceivable (and how I imagined it) that the data was collected by multiple individuals and at the time the messy spreadsheet had been created, it had not been collated yet.
     \item Not filling in zeros and null values: I have made remarks about that.
     \item Using formatting to convey information: I have noted that.
     \item Using formatting to make the data sheet look pretty: I did not make a remark about merged cells for the same reason indicated in point 2, the data had not been collated and although this would render the spreadsheet problematic as an input file, I did not see it as being at that stage yet.
@@ -77,11 +75,11 @@ This is not a problem for me.\newline
     \item Using special characters in data: I feel this falls into the formatting and note-taking-in-data-fields categories.
     \section{LaTeX Issues:}
     \begin{enumerate}
-        \item First bullet point came out without an indent. Seems to be default behaviour at the beginning of a document. Added \\subsection and a sub section title. Added a line break below which did not appear, I expect a LaTeX equivalent of the HTML </br> or nbsp; pair exists. \\break did not work, apparently it creates a spread text (whatever it is called). /linebreak did the same thing, rather than guessing I Googled and found that /medskip was what I was after.
-        \item Apparently the issue with the stretched text was due to my misspelling of \\subsection. I've fixed the indentation issue with \\parindent and added skips and \\newline commands between bullet points for readability. This concludes putting the 14/08/19 journal into LaTeX.
-        \item  I received a message when submitting (it's unclear where it is submitting to, I did connect to GitHub but did not select a repo, the Overleaf UI is ambiguous here, apparently there is a LaTex error but when I hover over it the error is explained as 'underfull hbox badness 10000' followed by the paragraph and line number. Not very helpful, apparently the issue was cause by how I used \\newline.
-        \item I've gone back to rebuild the bullet list using a native LaTeX syntax (I had pasted it across from OneNote initially causing it to be treated as plain text and not breaking lines which made me use \\newline etc etc). I got rid of the \\medskips and recompiled but then I had to go back and remove the plain-text bullets that came across from One Note.
-        \item Lol, so apparently the 'submit' button sends your document to a Journal, poor UX they should label it better. I've had a look at the menu and found that I want to go to Menu -> Sync ->GitHub but why won't it see my repo, it only asks me to create a new one. Poor UX. I'll try making the rep public.
+        \item First bullet point came out without an indent. Seems to be default behaviour at the beginning of a document. Added \verb!\subsection! and a sub section title. Added a line break below which did not appear, I expect a LaTeX equivalent of the HTML \verb!<br>! or \verb!nbsp;! pair exists. \verb!\break! did not work, apparently it creates a spread text (whatever it is called). \verb!\linebreak! did the same thing, so rather than guessing I Googled and found that \verb!\medskip! was what I was after.
+        \item Apparently the issue with the stretched text was due to my misspelling of \verb!\subsection!. I've fixed the indentation issue with \verb!\parindent! and added skips and \verb!\newline! commands between bullet points for readability. This concludes putting the 14 August 2019 journal into LaTeX.
+        \item  I received an error message when submitting my work (it's unclear where it is submitting to, I did connect to GitHub but did not select a repo). The Overleaf UI is ambiguous here, apparently there is a LaTex error but when I hover over it the error is explained as 'underfull hbox badness 10000' followed by the paragraph and line number. Not very helpful, apparently the issue was caused by how I used \verb!\newline!.
+        \item I've gone back to rebuild the bullet list using a native LaTeX syntax (I had pasted it across from OneNote initially causing it to be treated as plain text and not breaking lines which made me use \verb!\newline! etc etc). I got rid of the \verb!\medskips! and recompiled but then I had to go back and remove the plain-text bullets that came across from One Note.
+        \item Apparently the 'submit' button sends your document to a journal, poor UX they should label these things better. I've had a look at the menu and found that I want to go to Menu \verb!->! Sync \verb!->! GitHub but why won't it see my repo, it only asks me to create a new one. Poor UX. I'll try making the repo public.
         \item Apparently inserting underscore in text mode requires the use of an escape character.
     \end{enumerate}
 \end{enumerate}
