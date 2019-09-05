@@ -29,5 +29,12 @@
     \item Created the project.
     \item Used a text facet on the village column as instructed. Found the following issues when sorting: inconsistent vocabulary use between 'Chirdozo' and 'Chirodzo', 'Ruaca' and 'Ruca', 'Ruaca - Nhamuenda' and 'Ruaca-Nhamuenda'. '49' does not appear to be the right data for this field.
     \item Completed exercise, found: 19 unique results for 'interview\verb|_|date', the column appears to be formated as text, transformed to date as instructed, had a look at the available facet and chose 'Timeline' in the way of testing, arrived at a timeline graph. Found that most interview data had been collected in 11/2016.
+    \item Tested clustering as instructed, found no more clustering after using 'metaphone3'
+    \item Manually narrowd down to four clusters as instructed.
+    \item Moving to 'Tranfsforming data'. Removed all left square brackets as instructed. Removed single quotes using same method. Removed right square brackets.
+    \item Split items owned using a custom text facet, noticed several duplicate labels.
+    \item 'Mobile phone' and 'radio' appear to be the two most owned items; 'car' and 'computer' the least owned. The duplicate labels need clean-up before this step, why is this missing from the worksheet?!? I thought the idea was to get the machine to do the job not have me look for repeated instances of a label.
+    \item November was the month most reported for food lack.
+    \item Performed \newline \verb|"value.replace("[", "").replace("]", "").replace("'", "").replace(" ", "")"| on \verb|months_no_water|, \verb|liv_owned|, \verb|res_change|, \verb|no_food_mitigation| by recycling the command using the history tab.
 \end{enumerate}
 \end{document}
