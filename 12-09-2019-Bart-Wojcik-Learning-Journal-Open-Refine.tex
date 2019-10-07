@@ -1,0 +1,74 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{Open Refine Learning Journal   - Bart Wojcik}
+\author{Bart Wojcik}
+\date{12 September 2019, \textbf{Updated 7 October 2019}}
+
+\begin{document}
+
+\maketitle
+
+\section{OpenRefine for Social Science Data}
+\subsection{Setup}
+\begin{enumerate}
+    \item \textbf{Action: }Downloaded, extracted and attempted to run OpenRefine 3.2.
+    \subitem \textbf{Expectation: }Software executes. 
+    \subitem \textbf{Result: }Software did not execute, OpenRefine reports dependence on JRE.
+    \item \textbf{Action: }Downloaded and installed Java Runtime Environment, attempted to run OpenRefine again. 
+    \subitem \textbf{Expectation: }Software executes.
+    \subitem \textbf{Result: }Command prompt window opened and eventually a web interface launched in my default browser. Software executed successfully.
+    \item \textbf{Action: }Lesson concluded.
+\end{enumerate}
+\subsection{Introduction}
+\begin{enumerate}
+    \item \textbf{Action: }Completed reading.
+    \item \textbf{Action: }Lesson concluded.
+\end{enumerate}
+\subsection{Working with OpenRefine}
+\begin{enumerate}
+    \item \textbf{Action: }Attempted to import the SAFI\verb|_|openrefine.csv file.
+    \subitem \textbf{Expectation: } File imports and opens correctly.
+    \subitem \textbf{Result: }Successfully imported the file. Played a bit with the preview by changing the delimiter type to see what a bad import would look like. Reverted to default CSV to proceed with work.
+    \item \textbf{Action: }Attempted to created the project.
+    \subitem \textbf{Expectation: }Project creates.
+    \subitem \textbf{Result: }Project created.
+    \item \textbf{Action: }Used a text facet on the village column as instructed. 
+    \subitem \textbf{Expectation: }Text facet produces results prescribed in the exercise.
+    \subitem \textbf{Result: }Found the following issues when sorting: inconsistent vocabulary use between 'Chirdozo' and 'Chirodzo', 'Ruaca' and 'Ruca', 'Ruaca - Nhamuenda' and 'Ruaca-Nhamuenda'. '49' does not appear to be the right data for this field.
+    \item \textbf{Action: }Completed exercise.
+    \subitem \textbf{Expectation: }Expecting my findings to largely correspond to results expected in exercise solution.
+    \subitem \textbf{Results: } Found: 19 unique results for 'interview\verb|_|date', the column appears to be formatted as text, transformed to date as instructed, had a look at the available facet and chose 'Timeline' in the way of testing, arrived at a timeline graph. Found that most interview data had been collected in 11/2016.
+    \item \textbf{Action: }Tested clustering as instructed. 
+    \subitem \textbf{Expectation: }I am expecting that using all of the clustering methods will result in clean data that requires no further manual intervention.
+    \subitem \textbf{Result: }Found no more clustering after using 'metaphone3'
+    \item \textbf{Action: }Manually narrowed down to four clusters as instructed.
+    \subitem \textbf{Expectation: }Expecting results prescribed in the exercise solution.
+    \subitem \textbf{Result: }As prescribed in the exercise.
+    \item \textbf{Action: }Moving to 'Transforming data'. 
+    \item \textbf{Action: }Removed all left square brackets as instructed. Removed single quotes using the method prescribed in the exercise. Removed right square brackets.
+    \subitem \textbf{Expectation: }Expecting output to match the results prescribed in the exercise
+    \subitem \textbf{Result: }Output matches expected results.
+    \item \textbf{Action: }Split items owned using a custom text facet.
+    \subitem \textbf{Expectation: }Expecting results as prescribed in the exercise.
+    \subitem \textbf{Result: }Noticed several duplicate labels. 'Mobile phone' and 'radio' appear to be the two most owned items; 'car' and 'computer' the least owned. The duplicate labels need clean-up before this step, why is this missing from the worksheet?!? I thought the idea was to get the machine to do the job not have me look for repeated instances of a label. November was the month most reported for food lack.
+    \item \textbf{Action: }Performed \newline \verb|"value.replace("[", "").replace("]", "").replace("'", "").replace(" ", "")"| on \verb|months_no_water|, \verb|liv_owned|, \verb|res_change|, \verb|no_food_mitigation| by recycling the command using the history tab.
+    \subitem \textbf{Expectation: }Expecting output without left and right square brackets or spaces on these columns.
+    \subitem \textbf{Result: }Results as expected. Trimmed leading and trailing white-spaces and ended with only four labels as predicted by the exercise.
+    \item \textbf{Action: }Scoped the undo\verb|/|redo feature. Undoing and redoing works as you would from undoing and redoing.
+    \item \textbf{Action: }Concluded the exercise.
+\end{enumerate}
+\subsection{Filtering and Sorting with OpenRefine}
+\begin{enumerate}
+    \item \textbf{Action: }Completed the filtering section following the instructions outlined in the exercise.
+    \subitem \textbf{Expectation: }Expecting output to match that prescribed in the exercise.
+    \subitem \textbf{Result: } The selected types of roof were all the types that contained the string 'mabat', to further restrict the selection the user should provider a more closely phrased match.
+    \item \textbf{Action: }Scoped the \verb|include\exclude| feature following the instructions outlined in the exercise.
+    \subitem \textbf{Expectation: }I expect that using this feature will allow me to include or exclude parts of the data under investigation as required.
+    \subitem \textbf{Result: }The feature works as expected.
+    \item \textbf{Action: }Attempting to sort the tables as outlined in the exercise.
+    \subitem \textbf{Expectation: }I expect that sorting on a column will sort the data contained in that column.
+    \subitem \textbf {Result: }Sorting does nothing in my software, the command is simple and I have not made a mistake. I had to refresh the page for it to work again, I suspect my session either expired or timed out due to inactivity. To answer the question (asked by the lesson) of whether there is anything wrong, the lesson makes a tall assumption about my understanding of GPS based altitude recording, if I had to, I would say zero means 'sea level' but the lesson solution says that it means the device could not determine a value. Completed the sorting exercise and quickly discovered by looking at GPS coordinates that village 49 should be Chirodzo.
+    \item \textbf{Action: }Changed the village name as instructed.
+\end{enumerate}
+\end{document}
