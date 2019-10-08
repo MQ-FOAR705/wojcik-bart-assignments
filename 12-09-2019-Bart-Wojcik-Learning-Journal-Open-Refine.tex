@@ -3,8 +3,7 @@
 
 \title{Open Refine Learning Journal   - Bart Wojcik}
 \author{Bart Wojcik}
-\date{12 September 2019, \textbf{Updated 7 October 2019}}
-
+\date{12 September 2019 | \textbf{Updated 7, 8 October 2019}}
 \begin{document}
 
 \maketitle
@@ -70,5 +69,46 @@
     \subitem \textbf{Expectation: }I expect that sorting on a column will sort the data contained in that column.
     \subitem \textbf {Result: }Sorting does nothing in my software, the command is simple and I have not made a mistake. I had to refresh the page for it to work again, I suspect my session either expired or timed out due to inactivity. To answer the question (asked by the lesson) of whether there is anything wrong, the lesson makes a tall assumption about my understanding of GPS based altitude recording, if I had to, I would say zero means 'sea level' but the lesson solution says that it means the device could not determine a value. Completed the sorting exercise and quickly discovered by looking at GPS coordinates that village 49 should be Chirodzo.
     \item \textbf{Action: }Changed the village name as instructed.
+    \item \textbf{Action: }Lesson concluded.
 \end{enumerate}
+\subsection{Examining Numbers in OpenRefine}
+\begin{enumerate}
+    \item  \textbf{Action: }Execute a common transform to numerical values on the years\verb|_|farm column.
+    \subitem \textbf{Expectation: }The cell data transforms from text strign to numerical value that allows math to be performed.
+    \subitem \textbf{Result: }Success.
+    \item \textbf{Action: }Applied the same common transform to no\verb|_|members, yrs\verb|_|liv and buildings\verb|_|in\verb|_|compound columns as instructed.
+    \subitem \textbf{Expectation: }As above.
+    \subitem \textbf{Result: }As above
+    \subitem \textbf{Answer to exercise question: }Only cells containing numerical data can be transformed in this way.
+    \item \textbf{Action: }Amended a cell previously transformed to store numerical data by spelling out the number.
+    \subitem \textbf{Expectation: }The edit window data type drop down indicated the data will be stored as a text string so I expect it to be stored as such.
+    \subitem \textbf{Result: }The value is indeed once more stored as a text string.
+    \item \textbf{Action: }Applied text facet to the affected column as instructed.
+    \subitem \textbf{Expectation: }I expect the text facet to report the spelled out number as a non-numeric value.
+    \subitem \textbf{Result: }The spelled out value is indeed report as such and can be included or excluded from viewing using the non-numeric checkbox in this facet.
+    \item \textbf{Action: }Lesson concluded.
+\end{enumerate}
+    \subsection{Using scripts}
+    \begin{enumerate}
+        \item \textbf{Action: }Exported operations executed so far as a script as per exercise instructions.
+        \subitem \textbf{Expectation: }I expect that the software will save the history of work as a set of commands that can be re-imported and re-run on the data set, thus replicating the results I have achieved so far.
+        \subitem \textbf{Results: }OpenRefine exported the history of the performed data cleanup as a huma-readable JSON file.
+        \item \textbf{Action: }Re-imported the JSON script back into OpenRefine on a new, unmodified project based on the same SAFI source file.
+        \subitem \textbf{Expectation: }OpenRefine re-executes the commands stored in the script resulting in an instant clean up of the unmodified data.
+        \subitem \textbf{Result: }Results as expected.
+        \item \textbf{Action: }Lesson concluded.
+    \end{enumerate}
+    \subsection{Exporting and Saving Data from OpenRefine}
+    \begin{enumerate}
+        \item \textbf{Action: }Exported the project to a local file as instructed.
+        \subitem \textbf{Expectation: }I expect that OpenRefine will, in fact, export my data along with the history of operations performed on it to a local file.
+        \subitem \textbf{Result: }OpenRefine has indeed done so. I was expecting a single file (rather than an archive) so I was surprised to see a .tar.gz file. I extracted it with 7zip and found that it contains everything I outlined in my expectations for it.
+    \end{enumerate}
+    \subsection{Other Resource in OpenRefine}
+    \begin{enumerate}
+        \item \textbf{Action: }Read through contained material.
+        \subitem \textbf{Expectation: }I expect to find a bare modicum to no applicability of OpenRefine and data cleaning principles to the kind of qualitative research I am looking at carrying out at this tine,
+        \subitem \textbf{Result: }Concluded reading, results as expected.
+        \item \textbf{Action: }Concluded OpenRefine material.
+    \end{enumerate}
 \end{document}
